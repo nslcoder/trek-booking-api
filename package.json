@@ -1,0 +1,19 @@
+{
+  "name": "trek-booking-api",
+  "version": "1.0.0",
+  "description": "A RESTful API to book treks",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "nslcoder",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.16"
+  }
+}
