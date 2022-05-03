@@ -1,4 +1,4 @@
-const { fetchTreks, createTrek } = require('./services');
+const { fetchTreks, createTrek, findTrekPrice } = require('./services');
 
 const getTreks = async (req, res) => {
   try {
@@ -18,7 +18,16 @@ const postTrek = async (req, res) => {
   }
 };
 
+const getTrekPrice = async (trekId) => {
+  try {
+    return await findTrekPrice(trekId);
+  } catch (error) {
+    return error;
+  }
+};
+
 module.exports = {
   getTreks,
   postTrek,
+  getTrekPrice,
 };
