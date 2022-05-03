@@ -17,7 +17,17 @@ const createTrek = async (trekData) => {
   }
 };
 
+const findTrekPrice = async (trekId) => {
+  try {
+    const trek = await Trek.findById(trekId);
+    return trek.price;
+  } catch (error) {
+    return error;
+  }
+};
+
 module.exports = {
   fetchTreks,
   createTrek,
+  findTrekPrice,
 };
